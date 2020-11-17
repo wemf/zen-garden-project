@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-p {
+body {
   font-size: 25px;
 }
 
@@ -31,7 +31,7 @@ p {
 }
 .page-wrapper::after {
   content: "this text appears very small in the top right corner of the wrapper div";
-  background-image: linear-gradient(blue, skyblue, lightblue, forestgreen);
+  background-image: linear-gradient(#1051ca, skyblue, lightblue, forestgreen);
   background-size: cover;
   position: fixed;
   height: 100vh;
@@ -45,7 +45,6 @@ p {
   z-index: -1;
 }
 
-/* header   */
 #zen-intro {
   display: flex;
   flex-direction: row;
@@ -76,29 +75,12 @@ p {
   box-shadow: 25px 25px 30px yellow;
 }
 
-/*p{ 
-     float:left;
-     margin: 100px;
-    border-style: solid;
-    border-color: forestgreen;
-    width: 40px;
-    height: 40px;
-     border-radius: 55px 0;
-    font-size:3px;  
-}
-p:hover, p:active {
-    width: auto;
-    height: auto;
-     border-radius: auto;
-    font-size:20px;
-      z-index: auto;}*/
 header {
   text-align: center;
   border-style: double;
   height: 100px;
 }
 
-/* end header */
 .main {
   padding: 5px;
   grid-area: main;
@@ -124,7 +106,6 @@ aside::after {
   border-radius: 75px 0;
   position: absolute;
   margin-left: 26px;
-  /*animation-name: animation-time: animation repeat */
   animation: example 13s infinite;
   animation-fill-mode: forwards;
 }
@@ -136,8 +117,6 @@ aside::after {
   border-radius: 45px 0;
   position: fixed;
   margin-left: 27px;
-  -ms-transform: skewY(20deg);
-  /* IE 9 */
   transform: skewY(20deg);
   animation: example 12s infinite;
   animation-fill-mode: forwards;
@@ -150,8 +129,6 @@ aside::after {
   border-radius: 40px 0;
   position: fixed;
   margin-left: 33px;
-  -ms-transform: rotate(75deg);
-  /* IE 9 */
   transform: rotate(75deg);
   animation: example 11s infinite;
   animation-fill-mode: forwards;
@@ -165,7 +142,6 @@ aside::after {
   border-radius: 35px 0;
   position: fixed;
   margin-left: 31px;
-  /*animation-name: animation-time: animation repeat */
   animation: example 10s infinite;
   animation-fill-mode: forwards;
 }
@@ -188,14 +164,11 @@ aside::after {
   border-radius: 35px 0;
   position: fixed;
   margin-left: 20px;
-  -ms-transform: rotate(75deg);
-  /* IE 9 */
   transform: rotate(75deg);
   animation: example 9s infinite;
   animation-fill-mode: forwards;
 }
 
-/*    */
 .extra3 {
   background-color: lightgreen;
   height: 25px;
@@ -203,7 +176,6 @@ aside::after {
   border-radius: 35px 0;
   position: fixed;
   margin-left: 18px;
-  /*animation-name: animation-time: animation repeat */
   animation: example 13s infinite;
   animation-fill-mode: forwards;
 }
@@ -228,14 +200,11 @@ aside::after {
   border-radius: 35px 0;
   position: fixed;
   margin-left: 15px;
-  -ms-transform: rotate(75deg);
-  /* IE 9 */
   transform: rotate(75deg);
   animation: example 16s infinite;
   animation-fill-mode: forwards;
 }
 
-/* */
 .extra4 {
   float: left;
   background-color: lightgreen;
@@ -244,7 +213,6 @@ aside::after {
   border-radius: 35px 0;
   position: fixed;
   margin-left: 30px;
-  /*animation-name: animation-time: animation repeat */
   animation: example 4s infinite;
   animation-fill-mode: forwards;
 }
@@ -268,8 +236,6 @@ aside::after {
   width: 10px;
   border-radius: 35px 0;
   position: fixed;
-  -ms-transform: rotate(75deg);
-  /* IE 9 */
   transform: rotate(75deg);
   animation: example 22s infinite;
   animation-fill-mode: forwards;
@@ -278,8 +244,6 @@ aside::after {
 /* can NOT position: fixed the leaves in key */
 /* need to list z-index on each key line */
 @keyframes example {
-  /* from {top: 0px;}
-   to {top: 500px; background-color: orangered;}*/
   0% {
     top: 0px;
     padding: 10px;
@@ -291,17 +255,13 @@ aside::after {
     background: #F3CD72;
     padding: 12px;
     z-index: -1;
-    -ms-transform: rotate(20deg);
-    /* IE 9 */
     transform: rotate(20deg);
   }
   50% {
     top: 200px;
-    background: #FB854A;
+    background: #fb854a;
     padding: 14px;
     z-index: -1;
-    -ms-transform: rotate(-20deg);
-    /* IE 9 */
     transform: rotate(-20deg);
   }
   100% {
@@ -329,8 +289,6 @@ aside::after {
   }
 
   @keyframes example {
-    /* from {top: 0px;}
-     to {top: 500px; background-color: orangered;}*/
     0% {
       left: 0px;
       top: 0px;
@@ -344,18 +302,14 @@ aside::after {
       background: #F3CD72;
       padding: 12px;
       z-index: -1;
-      -ms-transform: rotate(20deg);
-      /* IE 9 */
       transform: rotate(20deg);
     }
     50% {
       left: 50px;
       top: 0px;
-      background: #FB854A;
+      background: #fb854a;
       padding: 14px;
       z-index: -1;
-      -ms-transform: rotate(-20deg);
-      /* IE 9 */
       transform: rotate(-20deg);
     }
     100% {
