@@ -18,7 +18,7 @@ body {
   z-index: auto;
 }
 .page-wrapper::before {
-  content: "Top right corner of html ";
+  content: "";
   background-image: url("https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg");
   background-size: cover;
   position: fixed;
@@ -30,7 +30,7 @@ body {
   z-index: -1;
 }
 .page-wrapper::after {
-  content: "this text appears very small in the top right corner of the wrapper div";
+  content: "";
   background-image: linear-gradient(#1051ca, skyblue, lightblue, forestgreen);
   background-size: cover;
   position: fixed;
@@ -72,7 +72,7 @@ body {
   border-radius: 84px 84px 84px;
   margin-right: 30px;
   padding-top: 50px;
-  box-shadow: 25px 25px 30px yellow;
+  box-shadow: 25px 25px 30px #ffb916;
 }
 
 header {
@@ -99,148 +99,141 @@ aside::after {
   content: "we can add extra text here with the ::after ";
 }
 
-.extra1 {
-  background-color: lightgreen;
-  height: 15px;
-  width: 15px;
-  border-radius: 75px 0;
-  position: absolute;
-  margin-left: 26px;
-  animation: example 13s infinite;
-  animation-fill-mode: forwards;
-}
-.extra1::after {
-  content: "1a";
-  background-color: lightgreen;
-  height: 14px;
-  width: 14px;
-  border-radius: 45px 0;
-  position: fixed;
-  margin-left: 27px;
-  transform: skewY(20deg);
-  animation: example 12s infinite;
-  animation-fill-mode: forwards;
-}
-.extra1::before {
-  content: "1";
-  background-color: lightgreen;
-  height: 12px;
-  width: 12px;
-  border-radius: 40px 0;
-  position: fixed;
-  margin-left: 33px;
-  transform: rotate(75deg);
-  animation: example 11s infinite;
-  animation-fill-mode: forwards;
-}
+@media all and (min-width: 540px) {
+  .extra1 {
+    background-color: lightgreen;
+    height: 15px;
+    width: 15px;
+    border-radius: 75px 0;
+    position: absolute;
+    margin-left: 26px;
+    animation: example 13s infinite;
+    animation-fill-mode: forwards;
+  }
+  .extra1::after {
+    background-color: lightgreen;
+    height: 14px;
+    width: 14px;
+    border-radius: 45px 0;
+    position: fixed;
+    margin-left: 27px;
+    transform: skewY(20deg);
+    animation: example 12s infinite;
+    animation-fill-mode: forwards;
+  }
+  .extra1::before {
+    background-color: lightgreen;
+    height: 12px;
+    width: 12px;
+    border-radius: 40px 0;
+    position: fixed;
+    margin-left: 33px;
+    transform: rotate(75deg);
+    animation: example 11s infinite;
+    animation-fill-mode: forwards;
+  }
 
-.extra2 {
-  margin-left: 50px;
-  background-color: lightgreen;
-  height: 15px;
-  width: 15px;
-  border-radius: 35px 0;
-  position: fixed;
-  margin-left: 31px;
-  animation: example 10s infinite;
-  animation-fill-mode: forwards;
-}
-.extra2::after {
-  content: "2";
-  background-color: lightgreen;
-  height: 16px;
-  width: 16px;
-  border-radius: 35px 0;
-  position: fixed;
-  margin-left: 40px;
-  animation: example 8s infinite;
-  animation-fill-mode: forwards;
-}
-.extra2::before {
-  content: "2";
-  background-color: greenyellow;
-  height: 13px;
-  width: 13px;
-  border-radius: 35px 0;
-  position: fixed;
-  margin-left: 20px;
-  transform: rotate(75deg);
-  animation: example 9s infinite;
-  animation-fill-mode: forwards;
-}
+  .extra2 {
+    margin-left: 50px;
+    background-color: lightgreen;
+    height: 15px;
+    width: 15px;
+    border-radius: 35px 0;
+    position: fixed;
+    margin-left: 31px;
+    animation: example 10s infinite;
+    animation-fill-mode: forwards;
+  }
+  .extra2::after {
+    background-color: lightgreen;
+    height: 16px;
+    width: 16px;
+    border-radius: 35px 0;
+    position: fixed;
+    margin-left: 40px;
+    animation: example 8s infinite;
+    animation-fill-mode: forwards;
+  }
+  .extra2::before {
+    background-color: greenyellow;
+    height: 13px;
+    width: 13px;
+    border-radius: 35px 0;
+    position: fixed;
+    margin-left: 20px;
+    transform: rotate(75deg);
+    animation: example 9s infinite;
+    animation-fill-mode: forwards;
+  }
 
-.extra3 {
-  background-color: lightgreen;
-  height: 25px;
-  width: 25px;
-  border-radius: 35px 0;
-  position: fixed;
-  margin-left: 18px;
-  animation: example 13s infinite;
-  animation-fill-mode: forwards;
-}
-.extra3::after {
-  content: "3";
-  float: left;
-  background-color: lightgreen;
-  height: 20px;
-  width: 20px;
-  border-radius: 35px 0;
-  position: fixed;
-  margin-left: 17px;
-  animation: example 8s infinite;
-  animation-fill-mode: forwards;
-}
-.extra3::before {
-  content: "3";
-  float: left;
-  background-color: greenyellow;
-  height: 10px;
-  width: 10px;
-  border-radius: 35px 0;
-  position: fixed;
-  margin-left: 15px;
-  transform: rotate(75deg);
-  animation: example 16s infinite;
-  animation-fill-mode: forwards;
-}
+  .extra3 {
+    background-color: lightgreen;
+    height: 25px;
+    width: 25px;
+    border-radius: 35px 0;
+    position: fixed;
+    margin-left: 18px;
+    animation: example 13s infinite;
+    animation-fill-mode: forwards;
+  }
+  .extra3::after {
+    float: left;
+    background-color: lightgreen;
+    height: 20px;
+    width: 20px;
+    border-radius: 35px 0;
+    position: fixed;
+    margin-left: 17px;
+    animation: example 8s infinite;
+    animation-fill-mode: forwards;
+  }
+  .extra3::before {
+    float: left;
+    background-color: greenyellow;
+    height: 10px;
+    width: 10px;
+    border-radius: 35px 0;
+    position: fixed;
+    margin-left: 15px;
+    transform: rotate(75deg);
+    animation: example 16s infinite;
+    animation-fill-mode: forwards;
+  }
 
-.extra4 {
-  float: left;
-  background-color: lightgreen;
-  height: 25px;
-  width: 25px;
-  border-radius: 35px 0;
-  position: fixed;
-  margin-left: 30px;
-  animation: example 4s infinite;
-  animation-fill-mode: forwards;
+  .extra4 {
+    float: left;
+    background-color: lightgreen;
+    height: 25px;
+    width: 25px;
+    border-radius: 35px 0;
+    position: fixed;
+    margin-left: 30px;
+    animation: example 4s infinite;
+    animation-fill-mode: forwards;
+  }
+  .extra4::after {
+    float: left;
+    background-color: lightgreen;
+    height: 15px;
+    width: 15px;
+    border-radius: 35px 0;
+    position: fixed;
+    margin-left: 50px;
+    animation: example 7s infinite;
+    animation-fill-mode: forwards;
+  }
+  .extra4::before {
+    float: left;
+    background-color: greenyellow;
+    height: 10px;
+    width: 10px;
+    border-radius: 35px 0;
+    position: fixed;
+    transform: rotate(75deg);
+    animation: example 22s infinite;
+    animation-fill-mode: forwards;
+  }
 }
-.extra4::after {
-  content: "4";
-  float: left;
-  background-color: lightgreen;
-  height: 15px;
-  width: 15px;
-  border-radius: 35px 0;
-  position: fixed;
-  margin-left: 50px;
-  animation: example 7s infinite;
-  animation-fill-mode: forwards;
-}
-.extra4::before {
-  content: "4";
-  float: left;
-  background-color: greenyellow;
-  height: 10px;
-  width: 10px;
-  border-radius: 35px 0;
-  position: fixed;
-  transform: rotate(75deg);
-  animation: example 22s infinite;
-  animation-fill-mode: forwards;
-}
-
 /* can NOT position: fixed the leaves in key */
 /* need to list z-index on each key line */
 @keyframes example {
@@ -252,7 +245,7 @@ aside::after {
   }
   25% {
     top: 100px;
-    background: #F3CD72;
+    background: #ffb916;
     padding: 12px;
     z-index: -1;
     transform: rotate(20deg);
@@ -299,7 +292,7 @@ aside::after {
     25% {
       left: 25px;
       top: 0px;
-      background: #F3CD72;
+      background: #ffb916;
       padding: 12px;
       z-index: -1;
       transform: rotate(20deg);
