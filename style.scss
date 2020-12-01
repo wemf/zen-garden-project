@@ -1,14 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Lato:ital,wght@0,400;1,300&display=swap');
 
-$blizzard-blue: #99d7deff;
-$army-green: #575e32ff;
-$bud-green: #79b251ff;
-$castleton-green: #305e4cff;
-$rich-black-fogra-29: #02111bff;
-$cornsilk: #fefae0ff;
-$fawn: #dda15eff;
-$liver-dogs: #bc6c25ff;
-$cyber-yellow: #ffd500ff;
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: $cornsilk;
+  font-family: $font-body;
+  font-style: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+h3 {
+  font-size: 1.75rem;
+}
 
-$font-heading: 'Kalam', cursive;
-$font-body: 'Lato', sans-serif;
+.intro {
+  background: $bud-green;
+}
+.main {
+  background: $castleton-green;
+}
+.sidebar{
+  background: $liver-dogs;
+}
+
+@media (min-width: 520px){
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 60px;
+    grid-template-rows: repeat(4, auto);
+  }
+  .intro { 
+    grid-area: 1 / 1 / 2 / 2;
+    background: none;
+  }
+  .main { 
+    grid-area: 2 / 3 / 3 / 4;
+    background: none;
+  }
+  .sidebar { 
+    grid-area: 1 / 2 / 5 / 3;
+    width: fit-content;
+    justify-self: center;
+  }
+  .preamble {
+    transform: translateX(200%);
+  }
+  .explanation {
+    transform: translateX(-200%);
+  }
+  .benefits{
+    transform: translateX(-200%);
+  }
+}
