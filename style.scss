@@ -9,10 +9,32 @@ $cornsilk: #fefae0ff;
 $fawn: #dda15eff;
 $liver-dogs: #bc6c25ff;
 $cyber-yellow: #ffd500ff;
+$white: #ffffff;
+$black: #111111;
 
 $font-heading: 'Kalam', cursive;
 $font-body: 'Lato', sans-serif;
 
+@mixin left-leaf($color, $background){
+  margin-top: 5rem;
+  padding: 2rem;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+  border-bottom-right-radius: 15%;
+  background: $background;
+  color: $color;
+  transform: skewY(10deg);
+}
+
+@mixin right-leaf($color, $background){
+  padding: 3rem 2rem;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+  border-bottom-right-radius: 15%;
+  background: $background;
+  color: $color;
+  transform: skewY(-7deg);
+}
 
 * {
   margin: 0;
@@ -38,21 +60,44 @@ h3 {
   font-size: 1.75rem;
 }
 
+ul {
+  list-style:none;
+  padding-left: 1em;
+}
+
+li {
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    background-image: url('./images/spiral.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.5em;
+  }
+}
+
 .intro {
   background: $bud-green;
+  padding: 1rem;
 }
 .main {
   background: $castleton-green;
+  padding: 1rem;
 }
 .sidebar{
   background: $liver-dogs;
+  padding: 1rem;
 }
 
 @media (min-width: 520px){
   .page-wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr) 60px;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, auto);
+    grid-column-gap: 10px;
+    padding: 0 2rem;
   }
   .intro { 
     grid-area: 1 / 1 / 2 / 2;
@@ -67,13 +112,33 @@ h3 {
     width: fit-content;
     justify-self: center;
   }
+  header{
+    @include left-leaf($black, $bud-green);
+  }
+  .summary{
+    @include left-leaf($white, $castleton-green);
+  }
   .preamble {
-    transform: translateX(200%);
+    @include right-leaf($white, $army-green);
+    transform: translateX(205%) skewY(-7deg);
   }
   .explanation {
-    transform: translateX(-200%);
+    @include left-leaf($black, $bud-green);
+    transform: translateX(-205%) skewY(10deg);
   }
   .benefits{
-    transform: translateX(-200%);
+    @include left-leaf($white, $army-green);
+    transform: translateX(-205%) skewY(10deg);
+  }
+  .participation{
+    @include right-leaf($white, $castleton-green);
+  }
+  .requirements{
+    @include right-leaf($black, $bud-green);
+  }
+  footer {
+    @include left-leaf($white, $castleton-green);
+    margin-top: 0;
+    transform: translateX(-205%) translateY(-50%) skewY(10deg);
   }
 }
