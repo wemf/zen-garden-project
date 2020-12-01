@@ -9,6 +9,8 @@
 @media (min-width: 520px){
 
   @import './partials/layout';
+  // Animation in the background
+  @import './partials/falling-leaf';
 
   header{
     @include left-leaf($black, $bud-green);

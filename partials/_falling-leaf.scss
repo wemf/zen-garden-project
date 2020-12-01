@@ -1,0 +1,168 @@
+.extra1 {
+    background-color: $bud-green;
+    height: 15px;
+    width: 15px;
+    border-radius: 75px 0;
+    position: absolute;
+    margin-left: 26px;
+    animation: leaf-animation 13s infinite;
+    animation-fill-mode: forwards;
+}
+.extra1::after {
+    content: "";
+    background-color: $bud-green;
+    height: 14px;
+    width: 14px;
+    border-radius: 45px 0;
+    position: fixed;
+    margin-left: 27px;
+    transform: skewY(20deg);
+    animation: leaf-animation 12s infinite;
+    animation-fill-mode: forwards;
+}
+.extra1::before {
+    content: "";
+    background-color: $bud-green;
+    height: 12px;
+    width: 12px;
+    border-radius: 40px 0;
+    position: fixed;
+    margin-left: 33px;
+    transform: rotate(75deg);
+    animation: leaf-animation 11s infinite;
+    animation-fill-mode: forwards;
+}
+.extra2 {
+    margin-left: 50px;
+    background-color: $bud-green;
+    height: 15px;
+    width: 15px;
+    border-radius: 35px 0;
+    position: fixed;
+    margin-left: 31px;
+    animation: leaf-animation 10s infinite;
+    animation-fill-mode: forwards;
+}
+.extra2::after {
+    content: "";
+    background-color: $bud-green;
+    height: 16px;
+    width: 16px;
+    border-radius: 35px 0;
+    position: fixed;
+    margin-left: 40px;
+    animation: leaf-animation 8s infinite;
+    animation-fill-mode: forwards;
+}
+.extra2::before {
+    content: "";
+    background-color: $army-green;
+    height: 13px;
+    width: 13px;
+    border-radius: 35px 0;
+    position: fixed;
+    margin-left: 20px;
+    transform: rotate(75deg);
+    animation: leaf-animation 9s infinite;
+    animation-fill-mode: forwards;
+}
+.extra3 {
+    background-color: $bud-green;
+    height: 25px;
+    width: 25px;
+    border-radius: 35px 0;
+    position: fixed;
+    margin-left: 18px;
+    animation: leaf-animation 13s infinite;
+    animation-fill-mode: forwards;
+}
+.extra3::after {
+    content: "";
+    float: left;
+    background-color: $bud-green;
+    height: 20px;
+    width: 20px;
+    border-radius: 35px 0;
+    position: fixed;
+    margin-left: 17px;
+    animation: leaf-animation 8s infinite;
+    animation-fill-mode: forwards;
+}
+.extra3::before {
+    content: "";
+    float: left;
+    background-color: $army-green;
+    height: 10px;
+    width: 10px;
+    border-radius: 35px 0;
+    position: fixed;
+    margin-left: 15px;
+    transform: rotate(75deg);
+    animation: leaf-animation 16s infinite;
+    animation-fill-mode: forwards;
+}
+.extra4 {
+    float: left;
+    background-color: $bud-green;
+    height: 25px;
+    width: 25px;
+    border-radius: 35px 0;
+    position: fixed;
+    margin-left: 30px;
+    animation: leaf-animation 4s infinite;
+    animation-fill-mode: forwards;
+}
+.extra4::after {
+    content: "";
+    float: left;
+    background-color: $bud-green;
+    height: 15px;
+    width: 15px;
+    border-radius: 35px 0;
+    position: fixed;
+    margin-left: 50px;
+    animation: leaf-animation 7s infinite;
+    animation-fill-mode: forwards;
+}
+.extra4::before {
+    content: "";
+    float: left;
+    background-color: $army-green;
+    height: 10px;
+    width: 10px;
+    border-radius: 35px 0;
+    position: fixed;
+    transform: rotate(75deg);
+    animation: leaf-animation 22s infinite;
+    animation-fill-mode: forwards;
+}
+/* can NOT position: fixed the leaves in key */
+/* need to list z-index on each key line */
+@keyframes leaf-animation {
+    0% {
+        top: 0px;
+        padding: 10px;
+        opacity: 0.1;
+        z-index: -1;
+    }
+    25% {
+        top: 100px;
+        background: $cyber-yellow;
+        padding: 12px;
+        z-index: -1;
+        transform: rotate(20deg);
+    }
+    50% {
+        top: 200px;
+        background: $fawn;
+        padding: 14px;
+        z-index: -1;
+        transform: rotate(-20deg);
+    }
+    100% {
+        top: 500px;
+        background: $liver-dogs;
+        padding: 8px;
+        z-index: -1;
+    }
+}
