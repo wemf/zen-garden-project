@@ -1,83 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Lato:ital,wght@0,400;1,300&display=swap');
 @import './partials/variables';
 @import './partials/mixins';
+@import './partials/bootstraping';
 
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  background: $cornsilk;
-  font-family: $font-body;
-  font-style: 16px;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: $font-heading;
-}
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-h2 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-h3 {
-  font-size: 1.75rem;
-}
+@import './partials/mobile';
 
-ul {
-  list-style:none;
-  padding-left: 1em;
-}
-
-li {
-  &:before {
-    content: '';
-    display: inline-block;
-    height: 1em;
-    width: 1em;
-    background-image: url('./images/spiral.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right: 0.5em;
-  }
-}
-
-.intro {
-  background: $bud-green;
-  padding: 1rem;
-}
-.main {
-  background: $castleton-green;
-  padding: 1rem;
-}
-.sidebar{
-  background: $liver-dogs;
-  padding: 1rem;
-}
-
+//Desktop
 @media (min-width: 520px){
-  .page-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
-    grid-column-gap: 10px;
-    padding: 0 2rem;
-  }
-  .intro { 
-    grid-area: 1 / 1 / 2 / 2;
-    background: none;
-  }
-  .main { 
-    grid-area: 2 / 3 / 3 / 4;
-    background: none;
-  }
-  .sidebar { 
-    grid-area: 1 / 2 / 5 / 3;
-    width: fit-content;
-    justify-self: center;
-  }
+
+  @import './partials/layout';
+
   header{
     @include left-leaf($black, $bud-green);
   }

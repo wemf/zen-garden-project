@@ -1,0 +1,20 @@
+.page-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-column-gap: 10px;
+    padding: 0 2rem;
+}
+.intro { 
+    grid-area: 1 / 1 / 2 / 2;
+    background: none;
+}
+.main { 
+    grid-area: 2 / 3 / 3 / 4;
+    background: none;
+}
+.sidebar { 
+    grid-area: 1 / 2 / 5 / 3;
+    width: fit-content;
+    justify-self: center;
+}
