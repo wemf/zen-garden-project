@@ -1,40 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Lato:ital,wght@0,400;1,300&display=swap');
-
-$blizzard-blue: #99d7deff;
-$army-green: #575e32ff;
-$bud-green: #79b251ff;
-$castleton-green: #305e4cff;
-$rich-black-fogra-29: #02111bff;
-$cornsilk: #fefae0ff;
-$fawn: #dda15eff;
-$liver-dogs: #bc6c25ff;
-$cyber-yellow: #ffd500ff;
-$white: #ffffff;
-$black: #111111;
-
-$font-heading: 'Kalam', cursive;
-$font-body: 'Lato', sans-serif;
-
-@mixin left-leaf($color, $background){
-  margin-top: 5rem;
-  padding: 2rem;
-  border-top-left-radius: 25%;
-  border-top-right-radius: 25%;
-  border-bottom-right-radius: 15%;
-  background: $background;
-  color: $color;
-  transform: skewY(10deg);
-}
-
-@mixin right-leaf($color, $background){
-  padding: 3rem 2rem;
-  border-top-left-radius: 25%;
-  border-top-right-radius: 25%;
-  border-bottom-right-radius: 15%;
-  background: $background;
-  color: $color;
-  transform: skewY(-7deg);
-}
+@import './partials/variables';
+@import './partials/mixins';
 
 * {
   margin: 0;
