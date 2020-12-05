@@ -43,6 +43,7 @@
   }
   .requirements{
     @include right-leaf($black, $bud-green);
+    border-top-left-radius: 5rem;
     margin-left: -4rem;
   }
   footer {

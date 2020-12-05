@@ -8,6 +8,7 @@ body {
   background: #fefae0ff;
   font-family: "Lato", sans-serif;
   font-size: 16px;
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -394,6 +395,7 @@ a:hover {
     background: #79b251ff;
     color: #111111;
     transform: skewY(-7deg);
+    border-top-left-radius: 5rem;
     margin-left: -4rem;
   }
 
