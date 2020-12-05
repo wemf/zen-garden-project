@@ -14,31 +14,40 @@
 
   header{
     @include left-leaf($black, $bud-green);
+    margin-right: -2rem;
   }
   .summary{
     @include left-leaf($white, $castleton-green);
+    margin-right: -2rem;
   }
   .preamble {
     @include right-leaf($white, $army-green);
     transform: translateX(205%) skewY(-7deg);
+    margin-top: -20rem;
+    margin-left: 4rem;
   }
   .explanation {
     @include left-leaf($black, $bud-green);
     transform: translateX(-205%) skewY(10deg);
+    margin-top: -4rem;
   }
   .benefits{
     @include left-leaf($white, $army-green);
     transform: translateX(-205%) skewY(10deg);
+    margin-top: -10rem;
   }
   .participation{
     @include right-leaf($white, $castleton-green);
+    margin-top: -15rem;
+    margin-left: -4rem;
   }
   .requirements{
     @include right-leaf($black, $bud-green);
+    margin-left: -4rem;
   }
   footer {
     @include left-leaf($white, $castleton-green);
     margin-top: 0;
-    transform: translateX(-205%) translateY(-50%) skewY(10deg);
+    transform: translateX(-205%) translateY(-25rem) skewY(10deg);
   }
 }

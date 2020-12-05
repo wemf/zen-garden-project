@@ -96,8 +96,7 @@ a:hover {
   .page-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
-    grid-column-gap: 10px;
+    grid-template-rows: repeat(3, auto);
     padding: 0 2rem;
   }
 
@@ -117,6 +116,7 @@ a:hover {
   .intro {
     grid-area: 1/1/2/2;
     background: none;
+    padding: 0;
   }
 
   .main {
@@ -126,8 +126,9 @@ a:hover {
 
   .sidebar {
     grid-area: 1/2/5/3;
-    width: fit-content;
-    justify-self: center;
+  }
+  .sidebar .wrapper {
+    padding: 3rem;
   }
 
   .extra1 {
@@ -319,6 +320,7 @@ a:hover {
     background: #79b251ff;
     color: #111111;
     transform: skewY(10deg);
+    margin-right: -2rem;
   }
 
   .summary {
@@ -330,6 +332,7 @@ a:hover {
     background: #305e4cff;
     color: #ffffff;
     transform: skewY(10deg);
+    margin-right: -2rem;
   }
 
   .preamble {
@@ -341,6 +344,8 @@ a:hover {
     color: #ffffff;
     transform: skewY(-7deg);
     transform: translateX(205%) skewY(-7deg);
+    margin-top: -20rem;
+    margin-left: 4rem;
   }
 
   .explanation {
@@ -353,6 +358,7 @@ a:hover {
     color: #111111;
     transform: skewY(10deg);
     transform: translateX(-205%) skewY(10deg);
+    margin-top: -4rem;
   }
 
   .benefits {
@@ -365,6 +371,7 @@ a:hover {
     color: #ffffff;
     transform: skewY(10deg);
     transform: translateX(-205%) skewY(10deg);
+    margin-top: -10rem;
   }
 
   .participation {
@@ -375,6 +382,8 @@ a:hover {
     background: #305e4cff;
     color: #ffffff;
     transform: skewY(-7deg);
+    margin-top: -15rem;
+    margin-left: -4rem;
   }
 
   .requirements {
@@ -385,6 +394,7 @@ a:hover {
     background: #79b251ff;
     color: #111111;
     transform: skewY(-7deg);
+    margin-left: -4rem;
   }
 
   footer {
@@ -397,7 +407,7 @@ a:hover {
     color: #ffffff;
     transform: skewY(10deg);
     margin-top: 0;
-    transform: translateX(-205%) translateY(-50%) skewY(10deg);
+    transform: translateX(-205%) translateY(-25rem) skewY(10deg);
   }
 }
 
